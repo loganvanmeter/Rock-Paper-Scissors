@@ -49,6 +49,13 @@ function game() {
 		let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
 		const computerSelection = computerPlay().toLowerCase();
 		console.log(playRound(playerSelection, computerSelection));
+		if (playerScore === 3) {
+			console.log("You won the game!");
+			break;
+		} else if (computerScore === 3) {
+			console.log("The computer won the game");
+			break;
+		}
 	}
 }
 
