@@ -16,4 +16,40 @@ const computerPlay = function () {
 	return answer;
 };
 
-console.log(computerPlay());
+let options = ["rock", "paper", "scissors"];
+let score = [];
+let playerScore = 0;
+let computerScore = 0;
+
+function playRound(playerSelection, computerSelection) {
+	const winningConditions =
+		(playerSelection === "rock" && computerSelection === "scissors") ||
+		(playerSelection === "scissors" && computerSelection === "paper") ||
+		(playerSelection === "paper" && computerSelection === "rock");
+
+	if (computerSelection === playerSelection) {
+		return "It's a draw!";
+	} else if (options.indexOf(playerSelection) === -1) {
+		return "That's not an option.";
+	} else if (winningConditions) {
+		score.push("player");
+		playerScore++;
+		console.log(`Player: ${playerScore} | Computer: ${computerScore}`);
+		return "You win this round!";
+	} else {
+		score.push("computer");
+		computerScore++;
+		console.log(`Player: ${playerScore} | Computer: ${computerScore}`);
+		return "You lose this round!";
+	}
+}
+
+function game() {
+	for (let i = 0; score.length < 5; i++) {
+		let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
+		const computerSelection = computerPlay().toLowerCase();
+		console.log(playRound(playerSelection, computerSelection));
+	}
+}
+
+game();
