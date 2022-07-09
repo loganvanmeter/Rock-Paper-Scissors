@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	height: 100vh;
+	width: 100vw;
+	background-color: blue;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+	justify-content: center;
+}
+
+.gameplay {
+	background-color: blueviolet;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.player-score,
+.computer-score {
+	background-color: pink;
+	display: flex;
+	align-items: center;
+}
+
+.computer {
+	background-color: red;
+	max-width: 100%;
+}
+
+.computer img {
+	max-width: 100%;
+	height: auto;
+}
+
+.gameplay-text {
+	background-color: aqua;
+}
+
+.player-options-row {
+	background-color: plum;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	max-width: auto;
+	justify-content: center;
+	gap: 1rem;
+	padding: 1.5rem;
+}
+
+.player-option {
+	background-color: orange;
+	flex-shrink: 1;
+	max-width: 33%;
+	height: auto;
+}

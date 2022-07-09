@@ -1,3 +1,4 @@
+/*
 "use strict";
 const genRandomNumber = function () {
 	return Math.floor(Math.random() * 4);
@@ -46,7 +47,7 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
 	for (let i = 0; score.length < 5; i++) {
-		let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
+		let playerSelection = "";
 		const computerSelection = computerPlay().toLowerCase();
 		console.log(playRound(playerSelection, computerSelection));
 		if (playerScore === 3) {
@@ -60,3 +61,4 @@ function game() {
 }
 
 game();
+*/

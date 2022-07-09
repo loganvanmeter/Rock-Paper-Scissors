@@ -5,8 +5,39 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Rock Paper Scissors</title>
+		<link rel="stylesheet" href="./style.css" />
+		<!--
+		<script src="./playgame.js" defer></script> -->
 	</head>
 	<body>
-		<script src="./playgame.js" async defer></script>
+		<div class="container">
+			<div class="player-score"><h2>YOUR SCORE</h2></div>
+			<div class="gameplay">
+				<div class="computer">
+					<img src="./assets/cocointro1.png" /id="coco">
+				</div>
+				<div class="gameplay-text"><h2>HOLDER TEXT</h2></div>
+				<div class="player-options-row">
+					<img
+						src="./assets/rock.png"
+						alt="illustration of a hand making a fist"
+						class="player-option"
+					/>
+					<img
+						src="./assets/paper.png"
+						alt="illustration of an open hand"
+						class="player-option"
+					/>
+					<img
+						src="./assets/scissors.png"
+						alt="illustration of a hand making a peace sign"
+						class="player-option"
+					/>
+				</div>
+			</div>
+			<div class="computer-score">
+				<h2>COCO'S SCORE</h2>
+			</div>
+		</div>
 	</body>
 </html>
